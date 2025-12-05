@@ -1,0 +1,179 @@
+INFO:root:Namespace(model_name='GCNMix', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-01 13:44:26 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 96                  
+ epoch              | 200                 
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ l2                 | 1e-06               
+ lr                 | 0.001               
+ main_metric        |                     
+ mix_alpha          | 0.5                 
+ mix_prob           | 0.3                 
+ n_layers           | 5                   
+ num_neg            | 1                   
+ num_workers        | 0                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ self_loop          | 0                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ../data/Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 2246016
+INFO:root:GCNMix(
+  (encoder): GCNMixEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x96]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x96]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0551,NDCG@5:0.0323,HR@10:0.1057,NDCG@10:0.0484,HR@20:0.2050,NDCG@20:0.0732,HR@50:0.5118,NDCG@50:0.1331)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.5116 [561.6 s]	dev=(HR@5:0.2509,NDCG@5:0.1635) [40.0 s] *
+INFO:root:Epoch 2     loss=0.4450 [678.2 s]	dev=(HR@5:0.2655,NDCG@5:0.1747) [40.7 s] *
+INFO:root:Epoch 3     loss=0.4263 [681.8 s]	dev=(HR@5:0.2900,NDCG@5:0.1950) [39.7 s] *
+INFO:root:Epoch 4     loss=0.4050 [687.0 s]	dev=(HR@5:0.3180,NDCG@5:0.2194) [38.2 s] *
+INFO:root:Epoch 5     loss=0.3805 [685.0 s]	dev=(HR@5:0.3467,NDCG@5:0.2416) [39.2 s] *
+INFO:root:Epoch 6     loss=0.3565 [687.4 s]	dev=(HR@5:0.3702,NDCG@5:0.2586) [41.4 s] *
+INFO:root:Epoch 7     loss=0.3363 [687.5 s]	dev=(HR@5:0.3866,NDCG@5:0.2714) [39.4 s] *
+INFO:root:Epoch 8     loss=0.3179 [687.9 s]	dev=(HR@5:0.3981,NDCG@5:0.2802) [38.9 s] *
+INFO:root:Epoch 9     loss=0.3026 [692.0 s]	dev=(HR@5:0.4046,NDCG@5:0.2857) [41.6 s] *
+INFO:root:Epoch 10    loss=0.2921 [689.8 s]	dev=(HR@5:0.4088,NDCG@5:0.2888) [40.4 s] *
+INFO:root:Epoch 11    loss=0.2833 [688.9 s]	dev=(HR@5:0.4119,NDCG@5:0.2910) [39.8 s] *
+INFO:root:Epoch 12    loss=0.2761 [690.5 s]	dev=(HR@5:0.4163,NDCG@5:0.2938) [39.5 s] *
+INFO:root:Epoch 13    loss=0.2697 [678.0 s]	dev=(HR@5:0.4191,NDCG@5:0.2959) [38.5 s] *
+INFO:root:Epoch 14    loss=0.2660 [525.1 s]	dev=(HR@5:0.4225,NDCG@5:0.2983) [38.9 s] *
+INFO:root:Epoch 15    loss=0.2579 [669.2 s]	dev=(HR@5:0.4227,NDCG@5:0.2988) [37.0 s] *
+INFO:root:Epoch 16    loss=0.2559 [651.7 s]	dev=(HR@5:0.4244,NDCG@5:0.3001) [37.1 s] *
+INFO:root:Epoch 17    loss=0.2501 [593.6 s]	dev=(HR@5:0.4254,NDCG@5:0.3006) [23.6 s] *
+INFO:root:Epoch 18    loss=0.2496 [535.6 s]	dev=(HR@5:0.4279,NDCG@5:0.3024) [27.9 s] *
+INFO:root:Epoch 19    loss=0.2442 [439.1 s]	dev=(HR@5:0.4312,NDCG@5:0.3049) [23.4 s] *
+INFO:root:Epoch 20    loss=0.2402 [496.3 s]	dev=(HR@5:0.4324,NDCG@5:0.3058) [27.3 s] *
+INFO:root:Epoch 21    loss=0.2353 [581.4 s]	dev=(HR@5:0.4323,NDCG@5:0.3060) [38.3 s] *
+INFO:root:Epoch 22    loss=0.2321 [618.9 s]	dev=(HR@5:0.4337,NDCG@5:0.3066) [34.7 s] *
+INFO:root:Epoch 23    loss=0.2287 [437.7 s]	dev=(HR@5:0.4354,NDCG@5:0.3078) [25.6 s] *
+INFO:root:Epoch 24    loss=0.2262 [449.5 s]	dev=(HR@5:0.4349,NDCG@5:0.3080) [26.6 s] *
+INFO:root:Epoch 25    loss=0.2233 [494.2 s]	dev=(HR@5:0.4355,NDCG@5:0.3088) [37.7 s] *
+INFO:root:Epoch 26    loss=0.2242 [556.0 s]	dev=(HR@5:0.4361,NDCG@5:0.3093) [23.5 s] *
+INFO:root:Epoch 27    loss=0.2207 [439.9 s]	dev=(HR@5:0.4385,NDCG@5:0.3108) [33.9 s] *
+INFO:root:Epoch 28    loss=0.2185 [581.4 s]	dev=(HR@5:0.4393,NDCG@5:0.3116) [33.2 s] *
+INFO:root:Epoch 29    loss=0.2154 [410.9 s]	dev=(HR@5:0.4395,NDCG@5:0.3124) [22.7 s] *
+INFO:root:Epoch 30    loss=0.2135 [399.9 s]	dev=(HR@5:0.4410,NDCG@5:0.3130) [25.4 s] *
+INFO:root:Epoch 31    loss=0.2110 [585.3 s]	dev=(HR@5:0.4417,NDCG@5:0.3138) [17.9 s] *
+INFO:root:Epoch 32    loss=0.2090 [451.3 s]	dev=(HR@5:0.4424,NDCG@5:0.3145) [16.3 s] *
+INFO:root:Epoch 33    loss=0.2057 [302.9 s]	dev=(HR@5:0.4435,NDCG@5:0.3152) [16.4 s] *
+INFO:root:Epoch 34    loss=0.2042 [307.8 s]	dev=(HR@5:0.4448,NDCG@5:0.3163) [35.5 s] *
+INFO:root:Epoch 35    loss=0.2029 [693.8 s]	dev=(HR@5:0.4451,NDCG@5:0.3171) [35.9 s] *
+INFO:root:Epoch 36    loss=0.2014 [620.5 s]	dev=(HR@5:0.4457,NDCG@5:0.3171) [41.6 s]
+INFO:root:Epoch 37    loss=0.1978 [644.9 s]	dev=(HR@5:0.4474,NDCG@5:0.3182) [35.8 s] *
+INFO:root:Epoch 38    loss=0.1983 [637.4 s]	dev=(HR@5:0.4464,NDCG@5:0.3184) [35.7 s] *
+INFO:root:Epoch 39    loss=0.1964 [638.1 s]	dev=(HR@5:0.4483,NDCG@5:0.3192) [33.3 s] *
+INFO:root:Epoch 40    loss=0.1942 [581.3 s]	dev=(HR@5:0.4485,NDCG@5:0.3191) [32.8 s]
+INFO:root:Epoch 41    loss=0.1923 [578.9 s]	dev=(HR@5:0.4483,NDCG@5:0.3192) [34.3 s] *
+INFO:root:Epoch 42    loss=0.1919 [586.1 s]	dev=(HR@5:0.4500,NDCG@5:0.3209) [34.0 s] *
+INFO:root:Epoch 43    loss=0.1896 [590.6 s]	dev=(HR@5:0.4509,NDCG@5:0.3214) [34.1 s] *
+INFO:root:Epoch 44    loss=0.1886 [583.7 s]	dev=(HR@5:0.4506,NDCG@5:0.3212) [32.9 s]
+INFO:root:Epoch 45    loss=0.1873 [563.2 s]	dev=(HR@5:0.4513,NDCG@5:0.3217) [32.7 s] *
+INFO:root:Epoch 46    loss=0.1874 [546.2 s]	dev=(HR@5:0.4526,NDCG@5:0.3226) [31.7 s] *
+INFO:root:Epoch 47    loss=0.1856 [545.0 s]	dev=(HR@5:0.4521,NDCG@5:0.3227) [31.4 s] *
+INFO:root:Epoch 48    loss=0.1841 [494.1 s]	dev=(HR@5:0.4545,NDCG@5:0.3240) [18.9 s] *
+INFO:root:Epoch 49    loss=0.1830 [390.8 s]	dev=(HR@5:0.4558,NDCG@5:0.3243) [31.7 s] *
+INFO:root:Epoch 50    loss=0.1815 [556.0 s]	dev=(HR@5:0.4565,NDCG@5:0.3243) [30.7 s] *
+INFO:root:Epoch 51    loss=0.1823 [576.8 s]	dev=(HR@5:0.4571,NDCG@5:0.3246) [34.3 s] *
+INFO:root:Epoch 52    loss=0.1806 [596.6 s]	dev=(HR@5:0.4574,NDCG@5:0.3250) [33.8 s] *
+INFO:root:Epoch 53    loss=0.1792 [549.9 s]	dev=(HR@5:0.4579,NDCG@5:0.3255) [33.3 s] *
+INFO:root:Epoch 54    loss=0.1776 [586.7 s]	dev=(HR@5:0.4579,NDCG@5:0.3256) [33.7 s] *
+INFO:root:Epoch 55    loss=0.1776 [592.5 s]	dev=(HR@5:0.4588,NDCG@5:0.3266) [32.7 s] *
+INFO:root:Epoch 56    loss=0.1760 [544.0 s]	dev=(HR@5:0.4592,NDCG@5:0.3265) [30.7 s]
+INFO:root:Epoch 57    loss=0.1761 [427.6 s]	dev=(HR@5:0.4603,NDCG@5:0.3270) [20.8 s] *
+INFO:root:Epoch 58    loss=0.1735 [372.2 s]	dev=(HR@5:0.4591,NDCG@5:0.3273) [20.7 s] *
+INFO:root:Epoch 59    loss=0.1738 [371.0 s]	dev=(HR@5:0.4598,NDCG@5:0.3278) [21.0 s] *
+INFO:root:Epoch 60    loss=0.1729 [364.7 s]	dev=(HR@5:0.4596,NDCG@5:0.3279) [20.6 s] *
+INFO:root:Epoch 61    loss=0.1741 [526.0 s]	dev=(HR@5:0.4603,NDCG@5:0.3278) [29.4 s]
+INFO:root:Epoch 62    loss=0.1717 [541.0 s]	dev=(HR@5:0.4615,NDCG@5:0.3283) [29.8 s] *
+INFO:root:Epoch 63    loss=0.1695 [542.5 s]	dev=(HR@5:0.4609,NDCG@5:0.3283) [32.3 s]
+INFO:root:Epoch 64    loss=0.1688 [535.4 s]	dev=(HR@5:0.4620,NDCG@5:0.3291) [30.9 s] *
+INFO:root:Epoch 65    loss=0.1687 [375.8 s]	dev=(HR@5:0.4623,NDCG@5:0.3291) [15.5 s] *
+INFO:root:Epoch 66    loss=0.1691 [255.2 s]	dev=(HR@5:0.4629,NDCG@5:0.3299) [17.1 s] *
+INFO:root:Epoch 67    loss=0.1686 [269.9 s]	dev=(HR@5:0.4630,NDCG@5:0.3292) [14.9 s]
+INFO:root:Epoch 68    loss=0.1658 [259.2 s]	dev=(HR@5:0.4622,NDCG@5:0.3294) [15.2 s]
+INFO:root:Epoch 69    loss=0.1667 [259.2 s]	dev=(HR@5:0.4622,NDCG@5:0.3297) [15.1 s]
+INFO:root:Epoch 70    loss=0.1654 [262.0 s]	dev=(HR@5:0.4607,NDCG@5:0.3290) [15.3 s]
+INFO:root:Epoch 71    loss=0.1667 [266.9 s]	dev=(HR@5:0.4616,NDCG@5:0.3294) [15.2 s]
+INFO:root:Epoch 72    loss=0.1652 [260.2 s]	dev=(HR@5:0.4616,NDCG@5:0.3292) [14.8 s]
+INFO:root:Epoch 73    loss=0.1656 [265.5 s]	dev=(HR@5:0.4624,NDCG@5:0.3295) [15.8 s]
+INFO:root:Epoch 74    loss=0.1632 [261.9 s]	dev=(HR@5:0.4628,NDCG@5:0.3299) [14.7 s] *
+INFO:root:Epoch 75    loss=0.1628 [381.1 s]	dev=(HR@5:0.4622,NDCG@5:0.3298) [33.7 s]
+INFO:root:Epoch 76    loss=0.1640 [558.6 s]	dev=(HR@5:0.4619,NDCG@5:0.3298) [31.5 s]
+INFO:root:Epoch 77    loss=0.1622 [554.5 s]	dev=(HR@5:0.4623,NDCG@5:0.3300) [32.2 s] *
+INFO:root:Epoch 78    loss=0.1624 [553.1 s]	dev=(HR@5:0.4636,NDCG@5:0.3307) [31.8 s] *
+INFO:root:Epoch 79    loss=0.1604 [560.1 s]	dev=(HR@5:0.4639,NDCG@5:0.3309) [32.3 s] *
+INFO:root:Epoch 80    loss=0.1630 [558.1 s]	dev=(HR@5:0.4635,NDCG@5:0.3308) [32.4 s]
+INFO:root:Epoch 81    loss=0.1611 [558.1 s]	dev=(HR@5:0.4634,NDCG@5:0.3308) [31.6 s]
+INFO:root:Epoch 82    loss=0.1606 [556.1 s]	dev=(HR@5:0.4631,NDCG@5:0.3307) [31.0 s]
+INFO:root:Epoch 83    loss=0.1609 [548.2 s]	dev=(HR@5:0.4639,NDCG@5:0.3313) [30.7 s] *
+INFO:root:Epoch 84    loss=0.1605 [547.3 s]	dev=(HR@5:0.4644,NDCG@5:0.3315) [31.1 s] *
+INFO:root:Epoch 85    loss=0.1602 [549.3 s]	dev=(HR@5:0.4658,NDCG@5:0.3324) [31.2 s] *
+INFO:root:Epoch 86    loss=0.1589 [545.8 s]	dev=(HR@5:0.4652,NDCG@5:0.3323) [30.7 s]
+INFO:root:Epoch 87    loss=0.1587 [546.9 s]	dev=(HR@5:0.4649,NDCG@5:0.3320) [30.9 s]
+INFO:root:Epoch 88    loss=0.1584 [546.9 s]	dev=(HR@5:0.4652,NDCG@5:0.3321) [31.0 s]
+INFO:root:Epoch 89    loss=0.1588 [548.1 s]	dev=(HR@5:0.4656,NDCG@5:0.3323) [31.5 s]
+INFO:root:Epoch 90    loss=0.1588 [546.1 s]	dev=(HR@5:0.4656,NDCG@5:0.3321) [31.2 s]
+INFO:root:Epoch 91    loss=0.1563 [544.9 s]	dev=(HR@5:0.4652,NDCG@5:0.3319) [30.7 s]
+INFO:root:Epoch 92    loss=0.1580 [548.5 s]	dev=(HR@5:0.4658,NDCG@5:0.3320) [31.1 s]
+INFO:root:Epoch 93    loss=0.1583 [549.1 s]	dev=(HR@5:0.4667,NDCG@5:0.3325) [30.7 s] *
+INFO:root:Epoch 94    loss=0.1576 [548.1 s]	dev=(HR@5:0.4662,NDCG@5:0.3325) [31.2 s]
+INFO:root:Epoch 95    loss=0.1580 [546.3 s]	dev=(HR@5:0.4661,NDCG@5:0.3321) [31.0 s]
+INFO:root:Epoch 96    loss=0.1562 [547.2 s]	dev=(HR@5:0.4642,NDCG@5:0.3309) [30.8 s]
+INFO:root:Epoch 97    loss=0.1551 [544.6 s]	dev=(HR@5:0.4647,NDCG@5:0.3320) [30.6 s]
+INFO:root:Epoch 98    loss=0.1561 [547.1 s]	dev=(HR@5:0.4664,NDCG@5:0.3327) [31.1 s] *
+INFO:root:Epoch 99    loss=0.1565 [548.0 s]	dev=(HR@5:0.4667,NDCG@5:0.3331) [30.8 s] *
+INFO:root:Epoch 100   loss=0.1558 [546.6 s]	dev=(HR@5:0.4662,NDCG@5:0.3331) [31.0 s]
+INFO:root:Epoch 101   loss=0.1552 [545.1 s]	dev=(HR@5:0.4664,NDCG@5:0.3332) [31.1 s] *
+INFO:root:Epoch 102   loss=0.1532 [546.3 s]	dev=(HR@5:0.4656,NDCG@5:0.3331) [30.7 s]
+INFO:root:Epoch 103   loss=0.1543 [545.9 s]	dev=(HR@5:0.4665,NDCG@5:0.3331) [31.1 s]
+INFO:root:Epoch 104   loss=0.1543 [548.5 s]	dev=(HR@5:0.4665,NDCG@5:0.3330) [31.3 s]
+INFO:root:Epoch 105   loss=0.1540 [546.3 s]	dev=(HR@5:0.4668,NDCG@5:0.3335) [31.0 s] *
+INFO:root:Epoch 106   loss=0.1536 [547.5 s]	dev=(HR@5:0.4668,NDCG@5:0.3329) [31.1 s]
+INFO:root:Epoch 107   loss=0.1544 [551.0 s]	dev=(HR@5:0.4653,NDCG@5:0.3330) [31.5 s]
+INFO:root:Epoch 108   loss=0.1551 [546.4 s]	dev=(HR@5:0.4659,NDCG@5:0.3333) [31.6 s]
+INFO:root:Epoch 109   loss=0.1549 [546.6 s]	dev=(HR@5:0.4657,NDCG@5:0.3332) [31.0 s]
+INFO:root:Epoch 110   loss=0.1543 [547.6 s]	dev=(HR@5:0.4667,NDCG@5:0.3340) [30.7 s] *
+INFO:root:Epoch 111   loss=0.1535 [546.9 s]	dev=(HR@5:0.4660,NDCG@5:0.3336) [30.9 s]
+INFO:root:Epoch 112   loss=0.1545 [548.2 s]	dev=(HR@5:0.4667,NDCG@5:0.3342) [30.5 s] *
+INFO:root:Epoch 113   loss=0.1546 [548.8 s]	dev=(HR@5:0.4681,NDCG@5:0.3345) [31.6 s] *
+INFO:root:Epoch 114   loss=0.1525 [546.9 s]	dev=(HR@5:0.4671,NDCG@5:0.3345) [31.4 s]
+INFO:root:Epoch 115   loss=0.1529 [547.3 s]	dev=(HR@5:0.4673,NDCG@5:0.3343) [31.1 s]
+INFO:root:Epoch 116   loss=0.1538 [547.1 s]	dev=(HR@5:0.4678,NDCG@5:0.3344) [31.5 s]
+INFO:root:Epoch 117   loss=0.1514 [548.6 s]	dev=(HR@5:0.4677,NDCG@5:0.3343) [31.0 s]
+INFO:root:Epoch 118   loss=0.1523 [547.4 s]	dev=(HR@5:0.4668,NDCG@5:0.3340) [31.4 s]
+INFO:root:Epoch 119   loss=0.1511 [549.8 s]	dev=(HR@5:0.4667,NDCG@5:0.3344) [31.4 s]
+INFO:root:Epoch 120   loss=0.1518 [547.8 s]	dev=(HR@5:0.4677,NDCG@5:0.3344) [31.2 s]
+INFO:root:Epoch 121   loss=0.1520 [548.9 s]	dev=(HR@5:0.4669,NDCG@5:0.3343) [31.2 s]
+INFO:root:Epoch 122   loss=0.1531 [546.0 s]	dev=(HR@5:0.4665,NDCG@5:0.3343) [31.2 s]
+INFO:root:Early stop at 122 based on dev result.
+INFO:root:
+Best Iter(dev)=  113	 dev=(HR@5:0.4681,NDCG@5:0.3345) [68318.8 s] 
+INFO:root:Load model from ../model/GCNMix/GCNMix__Grocery_and_Gourmet_Food__0__lr=0.001__l2=1e-06__emb_size=96__n_layers=5__mix_alpha=0.5__mix_prob=0.3__batch_size=256.pt
+INFO:root:
+Dev  After Training: (HR@5:0.4681,NDCG@5:0.3345,HR@10:0.5925,NDCG@10:0.3750,HR@20:0.6991,NDCG@20:0.4017,HR@50:0.8685,NDCG@50:0.4354)
+INFO:root:
+Test After Training: (HR@5:0.3944,NDCG@5:0.2712,HR@10:0.5239,NDCG@10:0.3134,HR@20:0.6400,NDCG@20:0.3428,HR@50:0.8380,NDCG@50:0.3819)
+INFO:root:Saving top-100 recommendation results to: ../log/GCNMix\GCNMix__Grocery_and_Gourmet_Food__0__lr=0\rec-GCNMix-dev.csv
+INFO:root:dev Prediction results saved!
+INFO:root:Saving top-100 recommendation results to: ../log/GCNMix\GCNMix__Grocery_and_Gourmet_Food__0__lr=0\rec-GCNMix-test.csv
+INFO:root:test Prediction results saved!
+INFO:root:
+--------------------------------------------- END: 2025-12-02 08:46:11 ---------------------------------------------
